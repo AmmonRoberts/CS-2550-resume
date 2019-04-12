@@ -3,17 +3,16 @@ let jobsFlag = false;
 let skillsFlag = false;
 let resume;
 
-function createPersonalInfoSection(personalInfo)
-{
+function createPersonalInfoSection(personalInfo) {
     let personalInfoString = `
     <h2>${resume.personalInfo.name}</h2>
     <p>${resume.personalInfo.phone}</p>
-    <p>${resume.personalInfo.email}</p>`;
+    <p>${resume.personalInfo.email}</p>
+    <p>GitHub: ${resume.personalInfo.gitHub}</p>`;
     return personalInfoString;
 }
 
-function createSummarySection(summary)
-{
+function createSummarySection(summary) {
     let summaryString = `
     <div class="sectionheader">  
         <h3 class="leftside clickable"><button class = "btn btn-info" title = "Click to learn more about Ammon Roberts">SUMMARY</button></h3>
@@ -34,9 +33,8 @@ function createSummarySection(summary)
     return summaryString;
 }
 
-function createExperienceSection(experience)
-{
-  let experienceString = ` 
+function createExperienceSection(experience) {
+    let experienceString = ` 
     <div>
         <div class="sectionheader">
             <h3 class ="leftside clickable" title = "Click to show relevant work experience"><button class = "btn btn-info">EXPERIENCE</button></h3>
@@ -124,8 +122,7 @@ function createExperienceSection(experience)
     return experienceString;
 }
 
-function createSkillsSection(skills)
-{
+function createSkillsSection(skills) {
     let skillString = `
     <div>
         <div class="sectionheader">
@@ -148,116 +145,91 @@ function createSkillsSection(skills)
     return skillString;
 }
 
-function toggleSection(id)
-{
-    if(id == '#summarySectionToggle')
-    {
-        if (summaryFlag == false)
-        {
+function toggleSection(id) {
+    if (id == '#summarySectionToggle') {
+        if (summaryFlag == false) {
             $('#summarySectionToggle').css('display', 'block');
             summaryFlag = true;
-        }
-        else
-        {
+        } else {
             $('#summarySectionToggle').css('display', 'none');
             summaryFlag = false;
         }
     }
-    
-    if(id == '#jobSectionToggle')
-    {
-        if (jobsFlag == false)
-        {
+
+    if (id == '#jobSectionToggle') {
+        if (jobsFlag == false) {
             $('#jobSectionToggle').css('display', 'block');
             jobsFlag = true;
-        }
-        else
-        {
+        } else {
             $('#jobSectionToggle').css('display', 'none');
             jobsFlag = false;
         }
     }
 
-    if(id == '#skillsSectionToggle')
-    {
-        if (skillsFlag == false)
-        {
+    if (id == '#skillsSectionToggle') {
+        if (skillsFlag == false) {
             $('#skillsSectionToggle').css('display', 'block');
             skillsFlag = true;
-        }
-        else
-        {
+        } else {
             $('#skillsSectionToggle').css('display', 'none');
             skillsFlag = false;
         }
     }
 }
 
-function displayPersonalInfo()
-{
+function displayPersonalInfo() {
     let load = $('#personalInfoSection');
-    load.html (createPersonalInfoSection(resume.personalInfo));
+    load.html(createPersonalInfoSection(resume.personalInfo));
 }
 
-function displaySummary()
-{
+function displaySummary() {
     let load = $('#summarySection');
-    load.html (createSummarySection(resume.summary));
+    load.html(createSummarySection(resume.summary));
 }
 
-function displayExperience()
-{
+function displayExperience() {
     let load = $('#experienceSection');
-    load.html (createExperienceSection(resume.jobs));
+    load.html(createExperienceSection(resume.jobs));
 }
 
-function displaySkills()
-{
+function displaySkills() {
     let load = $('#skillsSection');
-    load.html (createSkillsSection(resume.skills));
+    load.html(createSkillsSection(resume.skills));
 }
 
-function displayFromJson()
-{
+function displayFromJson() {
     displayPersonalInfo();
     displaySummary();
     displayExperience();
     displaySkills();
 }
 
-function printArray(array)
-{
+function printArray(array) {
     let result = '';
-    for(var i=0;i<array.length; i++) 
-    {
+    for (var i = 0; i < array.length; i++) {
         result += '<li>' + array[i] + '</li>';
-        
+
     }
     return result;
 }
 
-$(document).ready(function()
-{
+$(document).ready(function () {
 
-    $.getJSON ('resume.json', function(resumeJsonFile)
-    {
+    $.getJSON('resume.json', function (resumeJsonFile) {
         resume = resumeJsonFile;
         displayFromJson();
 
     });
 
-    $('#summarySection').click(function()
-    {
+    $('#summarySection').click(function () {
         toggleSection('#summarySectionToggle');
     });
 
-    $('#experienceSection').click(function()
-    {
+    $('#experienceSection').click(function () {
         toggleSection('#jobSectionToggle');
     });
-    
-    $('#skillsSection').click(function()
-    {
+
+    $('#skillsSection').click(function () {
         toggleSection('#skillsSectionToggle');
     });
 });
