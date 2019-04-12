@@ -36,20 +36,20 @@ function createSummarySection(summary) {
 function createExperienceSection(experience) {
     let experienceString = ` 
     <div>
-        <div class="sectionheader">
-            <h3 class ="leftside clickable" title = "Click to show relevant work experience"><button class = "btn btn-info">EXPERIENCE</button></h3>
+        <div class="row">
+            <h3 class =" xor d-flex clickable" title = "Click to show relevant work experience"><button class = "btn btn-info">EXPERIENCE</button></h3>
             <div class="grayblock"></div>
         </div>
 
         <div id = "jobSectionToggle">
 
-        <div class="job">
-            <div class="leftside">        
+        <div class="row">
+            <div class="col-4 xs">        
                 <h4 class="text-danger">${experience.proFourFS.title}</h4>
                 <span><p>${experience.proFourFS.employer}</p>
                 <p>${experience.proFourFS.dateRange}</p></span>
             </div>
-            <div class="rightside well well-sm">
+            <div class="col xor d-flex card bg-light p-3">
             <b>Duties</b>
             <ul>
                     ${printArray(experience.proFourFS.duties)}
@@ -62,14 +62,14 @@ function createExperienceSection(experience) {
             </div>
         </div>   
     <hr>
-        <div class="job">
-            <div class="leftside">
+        <div class="row">
+            <div class="col-4 xs">
                 <h4 class="text-danger">${experience.generalFS.title}</h4>
                 <span><p>${experience.generalFS.employer}</p>
                 <p>${experience.generalFS.dateRange}</p></span>
             </div>
 
-            <div class="rightside well well-sm">
+            <div class="col d-flex card bg-light p-3">
                 <b>Duties</b>
                 <ul>
                     ${printArray(experience.generalFS.duties)}
@@ -81,13 +81,13 @@ function createExperienceSection(experience) {
             </div>
         </div>
     <hr>
-        <div class="job">
-            <div class="leftside">
+        <div class="row">
+            <div class="col-4 xs">
                 <h4 class="text-danger">${experience.customerCare.title}</h4>
                 <span><p>${experience.customerCare.employer}</p>
                 <p>${experience.customerCare.dateRange}</p></span>
             </div>
-            <div class="rightside well well-sm">
+            <div class="col d-flex card bg-light p-3">
                 <b>Duties</b>
                 <ul>
                     ${printArray(experience.customerCare.duties)}
@@ -99,13 +99,13 @@ function createExperienceSection(experience) {
             </div>
         </div>
     <hr>
-        <div class="job">
-            <div class="leftside">
+        <div class="row">
+            <div class="col-4 xs">
                 <h4 class="text-danger">${experience.accountsReceivable.title}</h4>
                 <span><p>${experience.accountsReceivable.employer}</p>
                 <p>${experience.accountsReceivable.dateRange}</p></span>
             </div>
-            <div class="rightside well well-sm">
+            <div class="col d-flex card bg-light p-3">
                 <b>Duties</b>
                 <ul>
                     ${printArray(experience.accountsReceivable.duties)}
@@ -125,15 +125,15 @@ function createExperienceSection(experience) {
 function createSkillsSection(skills) {
     let skillString = `
     <div>
-        <div class="sectionheader">
-            <h3 class ="leftside clickable"><button class = "btn btn-info" title = "Click to show relevant skills">SKILLS</button></h3>
+        <div class="row">
+            <h3 class ="d-flex clickable"><button class = "btn btn-info" title = "Click to show relevant skills">SKILLS</button></h3>
             <div class="grayblock"></div>
         </div>
 
         <div id = "skillsSectionToggle">
-            <div class="sectionheader">
-            <div class="leftside"></div>
-                <div class="rightside well well-sm">
+            <div class="row">
+            <div class="col-4 xs"></div>
+                <div class="col d-flex card bg-light p-3">
                 <ul>
                         ${printArray(skills)}
                     </ul>
