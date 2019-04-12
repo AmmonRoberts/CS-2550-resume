@@ -16,8 +16,7 @@ function createPersonalInfoSection(personalInfo) {
 function createSummarySection(summary) {
     let summaryString = `
     <div class="row">  
-        <h3 class="d-flex clickable"><button class = "btn btn-info" title = "Click to learn more about Ammon Roberts">SUMMARY</button></h3>
-        <div class="grayblock"></div>
+        <h3 class="d-flex"><button class = "btn btn-info" title = "Click to learn more about Ammon Roberts">SUMMARY</button></h3>
     </div>
     <div id = "summarySectionToggle">
         <div class="row">
@@ -38,12 +37,9 @@ function createExperienceSection(experience) {
     let experienceString = ` 
     <div>
         <div class="row">
-            <h3 class =" xor d-flex clickable" title = "Click to show relevant work experience"><button class = "btn btn-info">EXPERIENCE</button></h3>
-            <div class="grayblock"></div>
+            <h3 class =" xor d-flex" title = "Click to show relevant work experience"><button class = "btn btn-info">EXPERIENCE</button></h3>
         </div>
-
         <div id = "jobSectionToggle">
-
         <div class="row">
             <div class="col-4 xs">        
                 <h4 class="text-danger">${experience.proFourFS.title}</h4>
@@ -127,10 +123,8 @@ function createSkillsSection(skills) {
     let skillString = `
     <div>
         <div class="row">
-            <h3 class ="d-flex clickable"><button class = "btn btn-info" title = "Click to show relevant skills">SKILLS</button></h3>
-            <div class="grayblock"></div>
+            <h3 class ="d-flex"><button class = "btn btn-info" title = "Click to show relevant skills">SKILLS</button></h3>
         </div>
-
         <div id = "skillsSectionToggle">
             <div class="row">
             <div class="col-4 xs"></div>
