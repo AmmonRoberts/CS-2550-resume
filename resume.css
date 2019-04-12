@@ -1,0 +1,25 @@
+.job ,.sectionheader{
+    display:flex;
+    flex-wrap:none;
+    position:center;
+}
+.leftside{
+    width:25%;
+    margin:10px;
+}
+.rightside {
+    width:75%;
+    margin:10px;
+}
+.whiteblock {
+    background-color:white;
+    width:25%;
+    height:20px;
+    margin:10px;
+}
+.clickable {
+    cursor: pointer;
+}
+#summarySectionToggle, #skillsSectionToggle, #jobSectionToggle{
+    display: none;
+}

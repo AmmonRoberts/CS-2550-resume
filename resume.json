@@ -1,0 +1,78 @@
+{
+    "personalInfo":{
+        "name":"Ammon Roberts",
+        "phone":"435-406-5454",
+        "email":"ammoneroberts@gmail.com"
+    },
+    
+    "summary":"A highly experienced technical support and customer service specialist with over 2 years’ experience. Currently a student at Utah Valley University, pursuing a B.S in software engineering.",
+
+    "jobs":{
+    
+        "proFourFS":{
+            "title":"Field Tech Support, Pro 4",
+            "employer":"Vivint, Inc.",
+            "dateRange":"May 2018 – present",
+            "duties":[
+                "Escalate software bugs from the Field Support team.",
+                "Train new hires and provide continued training to current employees.",
+                "Develop and design training materials.",
+                "Advanced troubleshooting, specifically camera and networking issues."
+            ],
+            "accomplishments":[
+                "Greatly improved communication between our team and the rest of Vivint through working closely with our engineers at the Innovation Center to solve problems and distribute helpful information through our department to the field.",
+                "Submitted 20 bugs and 27 enhancement requests since May 2017."
+            ]
+        },
+
+        "generalFS":{
+            "title":"Field Tech Support, General",
+            "employer":"Vivint, Inc.",
+            "dateRange":"August 2017 – May 2018",
+            "duties":[
+                "General advanced troubleshooting with field technicians.",
+                "Train field technicians as needed when they call in."
+            ],
+            "accomplishments":[
+                "Improved department certification tests to provide a better experience for coworkers."
+            ]
+        },
+
+        "customerCare":{
+            "title":"Customer Care, Technical Support (Tiers 1-4)",
+            "employer":"Vivint, Inc.",
+            "dateRange":"August 2016 – August 2017",
+            "duties":[
+                "Efficiently communicate to diagnose and troubleshoot equipment.",
+                "Resolve customer’s concerns."
+            ],
+            "accomplishments":[
+                "Advanced quickly through department tiers.",
+                "Mentored new hires on the team to assist in training on quality assurance and legal compliance."
+            ]
+        },
+
+        "accountsReceivable":{
+            "title":"Finance, Accounts Receivable",
+            "employer":"Infinisource, Inc",
+            "dateRange":"January 2016 - August 2016",
+            "duties":[
+                "Proactively remind customers of an end of contract and offer a renewal.",
+                "Process payments and correspond with customers on a regular basis."
+            ],
+            "accomplishments":[
+                "Quickly learned and accomplished duties satisfactorily having no prior experience in finance.",
+                "Digitized over 1000 client records over a period of 7 months."
+            ]
+        }
+
+    },
+    
+    "skills":
+        [
+            "Experience in C based languages.",
+            "Proficient in Microsoft Office products.",
+            "Proficient in Salesforce."
+        ]
+}
+
