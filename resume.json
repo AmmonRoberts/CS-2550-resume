@@ -2,7 +2,8 @@
     "personalInfo": {
         "name": "Ammon Roberts",
         "phone": "435-406-5454",
-        "email": "ammoneroberts@gmail.com"
+        "email": "ammoneroberts@gmail.com",
+        "gitHub": "https://github.com/AmmonRoberts"
     },
 
     "summary": "A highly experienced technical support and customer service specialist with over 2 years’ experience. Currently pursuing a B.S in software engineering at Utah Valley University.",
