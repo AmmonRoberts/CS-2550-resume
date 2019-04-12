@@ -42,9 +42,6 @@ function createExperienceSection(experience) {
             <div class="col-4 xs">        
                 <h4 class="text-danger">${experience.proFourFS.title}</h4>
                 <span><p>${experience.proFourFS.employer}</p>
-                <br>
-                <br>
-                <br>
                 <p>${experience.proFourFS.dateRange}</p></span>
             </div>
             <div class="col xor d-flex card bg-light p-3">
