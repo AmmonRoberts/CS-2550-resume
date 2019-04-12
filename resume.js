@@ -6,7 +6,6 @@ let resume;
 function createPersonalInfoSection(personalInfo) {
     let personalInfoString = `
     <h2>${resume.personalInfo.name}</h2>
-    <p>${resume.personalInfo.phone}</p>
     <p>${resume.personalInfo.email}</p>
     <a href="${resume.personalInfo.gitHub}">GitHub</a>`;
     return personalInfoString;
