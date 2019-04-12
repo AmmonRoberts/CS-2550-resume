@@ -14,21 +14,17 @@ function createPersonalInfoSection(personalInfo) {
 
 function createSummarySection(summary) {
     let summaryString = `
-    <div class="sectionheader">  
-        <h3 class="leftside clickable"><button class = "btn btn-info" title = "Click to learn more about Ammon Roberts">SUMMARY</button></h3>
-        <div class="grayblock"></div>
-    </div>
-    <div id = "summarySectionToggle">
-        <div class="sectionheader">
-            <div class="leftside">
-                <p class="whiteblock"></p>
-            </div>
-            
-            <div class="rightside well well-sm">
-            ${resume.summary}
-            </div>
+    <div>
+    <div class="row">
+        <div class="col-4 xs">
+            <p class="col"></p>
         </div>
-    </div>`;
+        
+        <div class="col d-flex card bg-light p-3">
+        ${resume.summary}
+        </div>
+    </div>
+</div>`;;
 
     return summaryString;
 }
@@ -36,88 +32,83 @@ function createSummarySection(summary) {
 function createExperienceSection(experience) {
     let experienceString = ` 
     <div>
-        <div class="sectionheader">
-            <h3 class ="leftside clickable" title = "Click to show relevant work experience"><button class = "btn btn-info">EXPERIENCE</button></h3>
-            <div class="grayblock"></div>
+    <div>
+
+    <div class="row">
+        <div class="col-4 xs">        
+            <h4 class="text-danger">${experience.proFourFS.title}</h4>
+            <span><p>${experience.proFourFS.employer}</p>
+            <p>${experience.proFourFS.dateRange}</p></span>
+        </div>
+        <div class="col xor d-flex card bg-light p-3">
+        <b>Duties</b>
+        <ul>
+                ${printArray(experience.proFourFS.duties)}
+            </ul>
+            <p></p>
+            <b>Accomplishments</b>
+            <ul>
+                ${printArray(experience.proFourFS.accomplishments)}
+            </ul>
+        </div>
+    </div>   
+<hr>
+    <div class="row">
+        <div class="col-4 xs">
+            <h4 class="text-danger">${experience.generalFS.title}</h4>
+            <span><p>${experience.generalFS.employer}</p>
+            <p>${experience.generalFS.dateRange}</p></span>
         </div>
 
-        <div id = "jobSectionToggle">
-
-        <div class="job">
-            <div class="leftside">        
-                <h4 class="text-danger">${experience.proFourFS.title}</h4>
-                <span><p>${experience.proFourFS.employer}</p>
-                <p>${experience.proFourFS.dateRange}</p></span>
-            </div>
-            <div class="rightside well well-sm">
+        <div class="col d-flex card bg-light p-3">
             <b>Duties</b>
             <ul>
-                    ${printArray(experience.proFourFS.duties)}
-                </ul>
-                <p></p>
-                <b>Accomplishments</b>
-                <ul>
-                    ${printArray(experience.proFourFS.accomplishments)}
-                </ul>
-            </div>
-        </div>   
-    <hr>
-        <div class="job">
-            <div class="leftside">
-                <h4 class="text-danger">${experience.generalFS.title}</h4>
-                <span><p>${experience.generalFS.employer}</p>
-                <p>${experience.generalFS.dateRange}</p></span>
-            </div>
-
-            <div class="rightside well well-sm">
-                <b>Duties</b>
-                <ul>
-                    ${printArray(experience.generalFS.duties)}
-                </ul>
-                <b>Accomplishments</b>
-                <ul>
-                    ${printArray(experience.generalFS.accomplishments)}
-                </ul>
-            </div>
+                ${printArray(experience.generalFS.duties)}
+            </ul>
+            <b>Accomplishments</b>
+            <ul>
+                ${printArray(experience.generalFS.accomplishments)}
+            </ul>
         </div>
-    <hr>
-        <div class="job">
-            <div class="leftside">
-                <h4 class="text-danger">${experience.customerCare.title}</h4>
-                <span><p>${experience.customerCare.employer}</p>
-                <p>${experience.customerCare.dateRange}</p></span>
-            </div>
-            <div class="rightside well well-sm">
-                <b>Duties</b>
-                <ul>
-                    ${printArray(experience.customerCare.duties)}
-                </ul>
-                <b>Accomplishments</b>
-                <ul>
-                    ${printArray(experience.customerCare.accomplishments)}
-                </ul>
-            </div>
+    </div>
+<hr>
+    <div class="row">
+        <div class="col-4 xs">
+            <h4 class="text-danger">${experience.customerCare.title}</h4>
+            <span><p>${experience.customerCare.employer}</p>
+            <p>${experience.customerCare.dateRange}</p></span>
         </div>
-    <hr>
-        <div class="job">
-            <div class="leftside">
-                <h4 class="text-danger">${experience.accountsReceivable.title}</h4>
-                <span><p>${experience.accountsReceivable.employer}</p>
-                <p>${experience.accountsReceivable.dateRange}</p></span>
-            </div>
-            <div class="rightside well well-sm">
-                <b>Duties</b>
-                <ul>
-                    ${printArray(experience.accountsReceivable.duties)}
-                </ul>
-                <b>Accomplishments</b>
-                <ul>
-                    ${printArray(experience.accountsReceivable.accomplishments)}
-                </ul>
-            </div>
+        <div class="col d-flex card bg-light p-3">
+            <b>Duties</b>
+            <ul>
+                ${printArray(experience.customerCare.duties)}
+            </ul>
+            <b>Accomplishments</b>
+            <ul>
+                ${printArray(experience.customerCare.accomplishments)}
+            </ul>
         </div>
+    </div>
+<hr>
+    <div class="row">
+        <div class="col-4 xs">
+            <h4 class="text-danger">${experience.accountsReceivable.title}</h4>
+            <span><p>${experience.accountsReceivable.employer}</p>
+            <p>${experience.accountsReceivable.dateRange}</p></span>
         </div>
-    </div>`;
+        <div class="col d-flex card bg-light p-3">
+            <b>Duties</b>
+            <ul>
+                ${printArray(experience.accountsReceivable.duties)}
+            </ul>
+            <b>Accomplishments</b>
+            <ul>
+                ${printArray(experience.accountsReceivable.accomplishments)}
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>`;
 
     return experienceString;
 }
@@ -125,21 +116,16 @@ function createExperienceSection(experience) {
 function createSkillsSection(skills) {
     let skillString = `
     <div>
-        <div class="sectionheader">
-            <h3 class ="leftside clickable"><button class = "btn btn-info" title = "Click to show relevant skills">SKILLS</button></h3>
-            <div class="grayblock"></div>
-        </div>
-
-        <div id = "skillsSectionToggle">
-            <div class="sectionheader">
-            <div class="leftside"></div>
-                <div class="rightside well well-sm">
+        <div>
+            <div class="row">
+            <div class="col-4 xs"></div>
+                <div class="col d-flex card bg-light p-3">
                 <ul>
                         ${printArray(skills)}
                     </ul>
                 </div>
             </div>
-        </div?
+        </div>
     </div>`;
 
     return skillString;
