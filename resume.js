@@ -8,7 +8,7 @@ function createPersonalInfoSection(personalInfo) {
     <h2>${resume.personalInfo.name}</h2>
     <p>${resume.personalInfo.phone}</p>
     <p>${resume.personalInfo.email}</p>
-    <link>GitHub: href="${resume.personalInfo.gitHub}"</link>`;
+    <link href="${resume.personalInfo.gitHub}">GitHub: </link>`;
     return personalInfoString;
 }
 
