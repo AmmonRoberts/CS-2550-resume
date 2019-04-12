@@ -22,7 +22,6 @@ function createSummarySection(summary) {
             <div class="col-4 xs">
                 <p class="col"></p>
             </div>
-            <br>
             <div class="col d-flex card bg-light p-3">
             ${resume.summary}
             </div>
@@ -43,6 +42,9 @@ function createExperienceSection(experience) {
             <div class="col-4 xs">        
                 <h4 class="text-danger">${experience.proFourFS.title}</h4>
                 <span><p>${experience.proFourFS.employer}</p>
+                <br>
+                <br>
+                <br>
                 <p>${experience.proFourFS.dateRange}</p></span>
             </div>
             <div class="col xor d-flex card bg-light p-3">
