@@ -8,8 +8,7 @@ function createPersonalInfoSection(personalInfo) {
     <h2>${resume.personalInfo.name}</h2>
     <p>${resume.personalInfo.phone}</p>
     <p>${resume.personalInfo.email}</p>
-    <a href="${resume.personalInfo.gitHub}">GitHub</a>
-    <br>`;
+    <a href="${resume.personalInfo.gitHub}">GitHub</a>`;
     return personalInfoString;
 }
 
@@ -23,7 +22,7 @@ function createSummarySection(summary) {
             <div class="col-4 xs">
                 <p class="col"></p>
             </div>
-            
+            <br>
             <div class="col d-flex card bg-light p-3">
             ${resume.summary}
             </div>
