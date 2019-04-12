@@ -14,17 +14,21 @@ function createPersonalInfoSection(personalInfo) {
 
 function createSummarySection(summary) {
     let summaryString = `
-    <div>
-    <div class="row">
-        <div class="col-4 xs">
-            <p class="col"></p>
-        </div>
-        
-        <div class="col d-flex card bg-light p-3">
-        ${resume.summary}
-        </div>
+    <div class="row">  
+        <h3 class="d-flex clickable"><button class = "btn btn-info" title = "Click to learn more about Ammon Roberts">SUMMARY</button></h3>
+        <div class="grayblock"></div>
     </div>
-</div>`;;
+    <div id = "summarySectionToggle">
+        <div class="row">
+            <div class="col-4 xs">
+                <p class="col"></p>
+            </div>
+            
+            <div class="col d-flex card bg-light p-3">
+            ${resume.summary}
+            </div>
+        </div>
+    </div>`;
 
     return summaryString;
 }
